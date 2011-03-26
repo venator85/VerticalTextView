@@ -1,10 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-	android:orientation="vertical" android:layout_width="fill_parent"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="horizontal" android:layout_width="fill_parent"
 	android:layout_height="fill_parent">
 
 	<com.verticaltextview.VerticalTextView
+		android:id="@+id/verticalTextView" android:layout_width="wrap_content"
+		android:layout_height="wrap_content" android:text="Hello World"
+		android:textColor="#0000ff" android:textStyle="italic" />
+	<TextView android:text="Classic TextView 1"
 		android:layout_width="wrap_content" android:layout_height="wrap_content"
-		android:text="Hello World" android:textColor="#0000ff"
-		android:textStyle="italic" />
-</LinearLayout>
+		android:layout_toRightOf="@id/verticalTextView" />
+	<TextView android:text="Classic TextView 2"
+		android:layout_width="wrap_content" android:layout_height="wrap_content"
+		android:layout_below="@id/verticalTextView" />
+</RelativeLayout>
